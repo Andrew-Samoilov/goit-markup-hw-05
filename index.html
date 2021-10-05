@@ -63,7 +63,7 @@
       <!-- Герой -->
       <section class="hero">
         <h1 class="hero-title">Эффективные решения<br />для вашего бизнеса</h1>
-        <button type="button">Заказать услугу</button>
+        <button type="button" data-modal-open>Заказать услугу</button>
       </section>
       <!--Особенности features -->
       <section class="features section">
@@ -415,6 +415,15 @@
         </div>
       </div>
     </footer>
+
+    <!-- модальное окно -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut qui suscipit laudantium dolor exercitationem. Consequatur, architecto iste a accusamus minima voluptatibus eius quisquam alias minus repellendus ipsa amet, cum tempore.</p>
+        <button data-modal-close>Закрыть</button>
+      </div>
+    </div>
+
     <!-- Ставим перед закрывающим тегом body -->
     <script src="./js/modal.js"></script>
   </body>
