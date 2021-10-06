@@ -137,6 +137,20 @@ button {
 .site-contact .link:hover {
   color: var(--accent);
 }
+/* синя рисочка на поточній сторінці */
+.current {
+position: relative;
+}
+.current::after {
+  position: absolute;
+  bottom: -1px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent);
+}
 
 /* контакты в шапке и футере */
 .site-contact-footer .link,
@@ -396,11 +410,36 @@ li.item {
 .portfolio .item {
   flex-basis: calc(100% / 3 - 30px);
   border: 1px solid #eeeeee;
+ 
+  
+  position: relative;
+  transition: transform 500ms;
+  overflow: hidden
 }
-
-.portfolio .item:hover {
+/* анімація не виходить */
+.portfolio .item:hover,
+ {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.portfolio .item::before {
+  display: inline-block;
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(33, 150, 243, 0.9);;
+  transform: translateY(-100%);
+}
+
+.portfolio .item::before:hover{
+  transform: translateY(0);
+}
+/* анімація не виходить */
 
 .portfolio-work {
   font-style: normal;
