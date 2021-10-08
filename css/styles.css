@@ -388,6 +388,8 @@ li.item {
   font-weight: 500;
   line-height: 1.62;
   letter-spacing: 0.03em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter .button:focus,
@@ -407,6 +409,18 @@ li.item {
 }
 
 /* секція портфоліо */
+.portfolio-link {
+  display: block;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
 .portfolio .list {
   margin-left: -30px;
   margin-top: -30px;
@@ -416,16 +430,11 @@ li.item {
 .portfolio .item {
   flex-basis: calc(100% / 3 - 30px);
   border: 1px solid #eeeeee;
-
-  position: relative;
-  transition: transform 500ms;
-  overflow: hidden;
 }
 
-.portfolio .item:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.portfolio .item:hover .portfolio-overley-text {
+
+.portfolio-link:hover .portfolio-overley-text,
+.portfolio-link:focus .portfolio-overley-text {
   transform: translateY(0);
 }
 
@@ -449,9 +458,6 @@ li.item {
   transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* анімація не виходить */
-
-/* анімація не виходить */
 
 .portfolio-work {
   font-style: normal;
@@ -520,6 +526,8 @@ li.item {
   display: flex;
   justify-content: center;
   height: 92px;
+  /* ------- */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover,
 .clients-link:focus,
@@ -627,5 +635,9 @@ transform: scale(2);
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  fill: currentColor;
 }
 
+.btn-close:hover{
+  color: var(--accent);
+}
